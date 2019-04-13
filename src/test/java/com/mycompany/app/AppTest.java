@@ -44,9 +44,4 @@ public class AppTest
         System.setOut(null);
     }
 
-    @Test
-    public void testFail() {
-        fail("Failed test.");
-    }
-
 }
