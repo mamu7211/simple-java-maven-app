@@ -30,8 +30,7 @@ public class AppTest
     }
 
     @Test
-    public void testAppMain()
-    {
+    public void testAppMain() {
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
