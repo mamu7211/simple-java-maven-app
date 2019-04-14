@@ -26,11 +26,16 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
+        }
+        stage('Package') {
+            steps {
+                sh './jenkins/scripts/packaging.sh'
+            }
         }        
 	}
 	post {
         always {
-            archiveArtifacts artifacts: 'target/**/*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'target/zip-content/*.zip', fingerprint: true
         }
     }
 }
