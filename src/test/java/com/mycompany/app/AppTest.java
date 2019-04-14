@@ -39,6 +39,11 @@ public class AppTest
         }
     }
 
+    @Test
+    public void testNewBranchWithFailedTest() {
+        fail("Failed test.");
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(null);
